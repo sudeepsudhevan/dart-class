@@ -1,24 +1,9 @@
-class Person {
-  final String name;
-  final int age;
-
-  Person(this.name, this.age);
-
-  Person.ageBelow50(this.name, this.age) {
-    print(this.age);
-  }
-  Person.ageAbove50(this.name, this.age) {
-    print(this.name);
-  }
-
-  void sayHello() {
-    print('Hello');
-  }
-}
+import 'person.dart';
 
 void main() {
-  final person = Person.ageAbove50('sudeep', 30);
-  print(person.name);
-  print(person.age);
+  final person = Person('sudeep', 30);
+  print(person._name); //private variable is not accessible outside the class
+  print(person._age);
+
   person.sayHello();
 }
