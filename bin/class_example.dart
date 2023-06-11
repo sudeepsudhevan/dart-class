@@ -1,12 +1,8 @@
 class Person {
-  String? name;
-  int age = 20;
+  final String name;
+  final int age;
 
-  Person(String name, int age) {
-    // Constructor
-    this.name = name;
-    this.age = age;
-  }
+  Person(this.name, this.age); // Constructor
 }
 
 void main() {
